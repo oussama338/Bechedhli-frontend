@@ -1,7 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import Modal from '../components/Modal';
-import ConfirmModal from '../components/ConfirmModal';
-import ActionBtn from '../components/ActionBtn';
+import { Modal, ConfirmModal, ActionBtn } from '../components/Modal';
 
 const BL_ITEM_CATEGORIES = ['panneau', 'onduleur', 'structure', 'fixation', 'câblage', 'chemin de câble', 'Tube IRO', 'accessoires', 'coffret', 'protection', 'divers'];
 
