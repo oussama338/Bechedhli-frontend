@@ -138,6 +138,28 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
 }
 .btn-danger:hover { background: rgba(239,68,68,0.2); }
 
+.btn-print {
+  background: rgba(59,130,246,0.1);
+  color: #3B82F6;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1px solid rgba(59,130,246,0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-print:hover {
+  background: rgba(59,130,246,0.18);
+  border-color: rgba(59,130,246,0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(59,130,246,0.18);
+}
+
 /* Input */
 .input-field {
   background: rgba(255,255,255,0.03);

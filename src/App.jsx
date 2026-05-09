@@ -9,6 +9,8 @@ import DashboardView from './views/DashboardView';
 import EmployeesView from './views/EmployeesView';
 import StockView from './views/StockView';
 import ClientsView from './views/ClientsView';
+import LivraisonView from './views/LivraisonView';
+import { INITIAL_BLS } from './data/bons-livraison';
 
 export default function App() {
   const [activeView, setActiveView] = useState('dashboard');
@@ -17,6 +19,7 @@ export default function App() {
   const [clients, setClients] = useState(INITIAL_CLIENTS);
   const [toasts, setToasts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [bls, setBls] = useState(INITIAL_BLS);
 
   const addToast = useCallback((message, type = 'success') => {
     const id = Date.now();
@@ -45,6 +48,7 @@ export default function App() {
           {activeView === 'employees' && <EmployeesView employees={employees} setEmployees={setEmployees} addToast={addToast} />}
           {activeView === 'stock' && <StockView stock={stock} setStock={setStock} addToast={addToast} />}
           {activeView === 'clients' && <ClientsView clients={clients} setClients={setClients} addToast={addToast} />}
+          {activeView === 'livraison' && <LivraisonView bls={bls} setBls={setBls} clients={clients} addToast={addToast} />}
         </div>
       </main>
       <ToastContainer toasts={toasts} />
